@@ -9,4 +9,5 @@ public class DirectorEmpleado implements Empleados {
     public String getTareas() {
         return "Gestionar la Plantilla de la Empresa";
     }
+    
 }
