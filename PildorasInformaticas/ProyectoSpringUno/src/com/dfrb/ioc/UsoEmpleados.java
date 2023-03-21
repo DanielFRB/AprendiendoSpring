@@ -17,7 +17,11 @@ public class UsoEmpleados {
         Empleados Daniel = miContexto.getBean("miSecretarioEmp", Empleados.class);
         // 3er Paso: Imprimir los Objetos creados.
         System.out.println(Oswaldo.getTareas());
+        // El objeto Oswaldo utiliza la Inyeccion de Dependencias para ejecutar el metodo getInforme()
+        System.out.println(Oswaldo.getInforme());
         System.out.println(Yaneth.getTareas());
+        // El objeto Yaneth utiliza la Inyeccion de Dependencias para ejecutar el metodo getInforme()
+        System.out.println(Yaneth.getInforme());
         System.out.println(Daniel.getTareas());
         // 4to Paso: Cerrar el Contexto para liberar recursos.
         miContexto.close();
