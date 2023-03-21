@@ -16,6 +16,10 @@
     <bean id="miDirectorEmp" class="com.dfrb.ioc.DirectorEmpleado">
         <!-- Inyeccion de Dependencia mediante Constructor -->
         <constructor-arg ref="miInforme"></constructor-arg>
+        <!-- Configurando los campos que luego seran Inyectados en los objetos de tipo 
+                DirectorEmpleado mediante los metodos Setter -->
+        <property name="email" value="direcccion_informatica@gmail.com"></property>
+        <property name="nombreEmpresa" value="DFRB C.A."></property>
     </bean>
     
     <!-- Se configura el Bean creado (miInforme) para los objetos tipo JefeEmpleado -->
@@ -28,6 +32,10 @@
     <bean id="miSecretarioEmp" class="com.dfrb.ioc.SecretarioEmpleado">
         <!-- Inyeccion de Dependencia mediante metodo Setter -->
         <property name="informeNuevo" ref="miInforme"></property>
+        <!-- Configurando los campos que luego seran Inyectados en los objetos de tipo 
+                SecretarioEmpleado mediante los metodos Setter -->
+        <property name="email" value="secretariainformatica@gmail.com"></property>
+        <property name="nombreEmpresa" value="DFRB C.A."></property>
     </bean>
     
 </beans>
