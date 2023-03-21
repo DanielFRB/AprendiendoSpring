@@ -8,3 +8,12 @@
 /PildorasInformaticas/ProyectoSpringUno/out/
 /PildorasInformaticas/ProyectoSpringUno/*.xml
 /PildorasInformaticas/ProyectoSpringUno/*.mf
+
+/PildorasInformaticas/SpringConAnnotations/nbproject/
+/PildorasInformaticas/SpringConAnnotations/build/
+/PildorasInformaticas/SpringConAnnotations/libs/
+/PildorasInformaticas/SpringConAnnotations/dist/
+/PildorasInformaticas/SpringConAnnotations/test/
+/PildorasInformaticas/SpringConAnnotations/out/
+/PildorasInformaticas/SpringConAnnotations/*.xml
+/PildorasInformaticas/SpringConAnnotations/*.mf
