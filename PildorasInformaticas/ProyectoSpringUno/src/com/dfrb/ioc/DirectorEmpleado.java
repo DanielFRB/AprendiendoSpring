@@ -37,6 +37,16 @@ public class DirectorEmpleado implements Empleados {
         return "Informe creado por el Director: "+ informeNuevo.getInforme(); // Se inyecta el metodo getInforme() de la Clase Informe
     }
     
+    // Metodo init(). Ejecuta tareas antes de que el Bean este disponible
+    public void metodoInicial() {
+        System.out.println("Metodo Init, dentro van las tareas que se ejecutan antes de usar el bean");
+    }
+    
+    // Metodo destroy(). Ejecuta tareas despues de que el Bean haya sido utilizado
+    public void metodoFinal() {
+        System.out.println("Metodo Destroy, dentro van las tareas que se ejecutan despues de usar el bean");
+    }
+    
     // 2do Paso: Creacion de campo tipo CreacionInforme (Interface)
     private CreacionInformes informeNuevo;
     
