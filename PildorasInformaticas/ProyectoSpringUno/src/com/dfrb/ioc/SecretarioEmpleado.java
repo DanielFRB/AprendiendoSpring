@@ -9,6 +9,22 @@ public class SecretarioEmpleado implements Empleados {
     public void setInformeNuevo(CreacionInformes informeNuevo) {
         this.informeNuevo = informeNuevo;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNombreEmpresa() {
+        return nombreEmpresa;
+    }
+
+    public void setNombreEmpresa(String nombreEmpresa) {
+        this.nombreEmpresa = nombreEmpresa;
+    }
     
     @Override
     public String getTareas() {
@@ -22,4 +38,8 @@ public class SecretarioEmpleado implements Empleados {
     
     // Creacion de campo tipo CreacionInforme (Interface)
     private CreacionInformes informeNuevo;
+    
+    // Creacion de campos para Inyeccion de Campos con Spring
+    private String email;
+    private String nombreEmpresa;
 }
