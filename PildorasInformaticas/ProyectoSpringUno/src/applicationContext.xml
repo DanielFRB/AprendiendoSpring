@@ -8,6 +8,10 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
     
+    <!-- Se carga dentro de este archivo (applicationContext.xml) el archivo externo de propiedades 
+            (datosEmpresa.properties) anteriormente creado -->
+    <context:property-placeholder location="classpath:datosEmpresa.properties"/>
+    
     <!-- Se crean los beans correspondiente a cada clase: Director, Jefe y Secrfetario -->
     <!-- 3er Paso: para la Inyeccion de Dependencias, creando un nuevo Bean que construye objetos de tipo Informe -->
     <bean id="miInforme" class="com.dfrb.ioc.Informe"></bean>
@@ -18,8 +22,9 @@
         <constructor-arg ref="miInforme"></constructor-arg>
         <!-- Configurando los campos que luego seran Inyectados en los objetos de tipo 
                 DirectorEmpleado mediante los metodos Setter -->
-        <property name="email" value="direcccion_informatica@gmail.com"></property>
-        <property name="nombreEmpresa" value="DFRB C.A."></property>
+        <!-- Se sustituyen los valores escritos anteriormente por los nombres de los campos dentro del archivo externo -->
+        <property name="email" value="${email}"></property>
+        <property name="nombreEmpresa" value="${nombreEmpresa}"></property>
     </bean>
     
     <!-- Se configura el Bean creado (miInforme) para los objetos tipo JefeEmpleado -->
