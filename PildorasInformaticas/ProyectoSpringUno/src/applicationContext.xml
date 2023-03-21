@@ -9,8 +9,25 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
     
     <!-- Se crean los beans correspondiente a cada clase: Director, Jefe y Secrfetario -->
-    <bean id="miDirectorEmp" class="com.dfrb.ioc.DirectorEmpleado"></bean>
-    <bean id="miSecretarioEmp" class="com.dfrb.ioc.SecretarioEmpleado"></bean>
-    <bean id="miJefeEmp" class="com.dfrb.ioc.JefeEmpleado"></bean>
+    <!-- 3er Paso: para la Inyeccion de Dependencias, creando un nuevo Bean que construye objetos de tipo Informe -->
+    <bean id="miInforme" class="com.dfrb.ioc.Informe"></bean>
+    
+    <!-- Continuacion 3er Paso: Se configura el Bean creado (miInforme) para los objetos tipo DirectorEmpleado -->
+    <bean id="miDirectorEmp" class="com.dfrb.ioc.DirectorEmpleado">
+        <!-- Inyeccion de Dependencia mediante Constructor -->
+        <constructor-arg ref="miInforme"></constructor-arg>
+    </bean>
+    
+    <!-- Se configura el Bean creado (miInforme) para los objetos tipo JefeEmpleado -->
+    <bean id="miJefeEmp" class="com.dfrb.ioc.JefeEmpleado">
+        <!-- Inyeccion de Dependencia mediante Constructor -->
+        <constructor-arg ref="miInforme"></constructor-arg>
+    </bean>
+    
+    <!-- Se configura el Bean creado (miInforme) para los objetos tipo SecretarioEmpleado -->
+    <bean id="miSecretarioEmp" class="com.dfrb.ioc.SecretarioEmpleado">
+        <!-- Inyeccion de Dependencia mediante metodo Setter -->
+        <property name="informeNuevo" ref="miInforme"></property>
+    </bean>
     
 </beans>
