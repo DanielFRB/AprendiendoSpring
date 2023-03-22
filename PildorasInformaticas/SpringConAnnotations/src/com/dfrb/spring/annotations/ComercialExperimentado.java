@@ -13,12 +13,28 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ComercialExperimentado implements Empleados {
-    @Autowired
+	/* Spring nos permite hacer la inyeccion de dependencias de varias formas, la primera forma es mediante un Constructor
+	que recibe su correspondiente parametro a inyectar. La segunda forma es mediante un metodo de tipo Setter que al igual
+	que el Constructor reciba el parametro a inyectar. La tercera forma es por medio de un Campo de Clase en la que se aplica 
+	internamente el concepto de Java que se denomina "Reflexion" que permite hacer la Inyeccion de la Dependencia. 
+    
+    1. Inyeccion de Dependencia mediante Constructor
+	 @Autowired
     public ComercialExperimentado(CreacionInformeFinanciero informeFinanciero) {
         this.informeFinanciero = informeFinanciero;
     }
     
-    @Override
+    2. Inyeccion de Dependencia mediante Metodo Setter
+	@Autowired
+    public void setInformeFinanciero(CreacionInformeFinanciero informeFinanciero) {
+		this.informeFinanciero = informeFinanciero;
+	}
+	
+	3. Inyeccion de Dependencia mediante Campo de Clase */
+	@Autowired
+    private CreacionInformeFinanciero informeFinanciero;
+
+	@Override
     public String getTareas() {
         return "Vender, vender y vender mas!!!";
     }
@@ -28,6 +44,4 @@ public class ComercialExperimentado implements Empleados {
         //return "Informe generado por el comercial";
         return informeFinanciero.getInformeFinanciero();
     }
-    
-    private CreacionInformeFinanciero informeFinanciero;
 }
