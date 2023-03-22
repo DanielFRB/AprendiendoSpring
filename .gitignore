@@ -8,6 +8,8 @@
 /PildorasInformaticas/ProyectoSpringUno/out/
 /PildorasInformaticas/ProyectoSpringUno/*.xml
 /PildorasInformaticas/ProyectoSpringUno/*.mf
+/PildorasInformaticas/ProyectoSpringUno/*.classpath
+/PildorasInformaticas/ProyectoSpringUno/*.project
 
 /PildorasInformaticas/SpringConAnnotations/nbproject/
 /PildorasInformaticas/SpringConAnnotations/build/
@@ -17,3 +19,5 @@
 /PildorasInformaticas/SpringConAnnotations/out/
 /PildorasInformaticas/SpringConAnnotations/*.xml
 /PildorasInformaticas/SpringConAnnotations/*.mf
+/PildorasInformaticas/SpringConAnnotations/*.classpath
+/PildorasInformaticas/SpringConAnnotations/*.project
