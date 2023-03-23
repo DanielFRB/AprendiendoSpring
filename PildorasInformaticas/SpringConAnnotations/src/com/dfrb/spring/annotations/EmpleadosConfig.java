@@ -3,6 +3,7 @@ package com.dfrb.spring.annotations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @author dfrb@ne
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("com.dfrb.spring.annotations")
+@PropertySource("classpath:datosEmpresa.properties")
 public class EmpleadosConfig {
 	// Definir el Bean para InformeFinancieroDptocompras
 	@Bean
