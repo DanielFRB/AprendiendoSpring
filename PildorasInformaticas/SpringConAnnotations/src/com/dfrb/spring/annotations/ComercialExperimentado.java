@@ -1,5 +1,8 @@
 package com.dfrb.spring.annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -14,8 +17,22 @@ import org.springframework.stereotype.Component;
 // nombre de la Clase.
 
 @Component
-@Scope("prototype") // Java Annotation que permite trabajar con los patrones Singleton y Prototype
+// Para poder trabajar con el ciclo de vida del Bean es necesario que el Patron de Diseño del Bean sea de tipo Singleton
+// por lo que se debe eliminar o comentar la anotacion @Scope
+// @Scope("prototype") -- Java Annotation que permite trabajar con los patrones Singleton y Prototype, por defecto es Singleton
 public class ComercialExperimentado implements Empleados {
+	// Ejecucion de codigo despues de creado el Bean
+	@PostConstruct // Sustituye al metodo init()
+	public void ejecutaDespuesCreacion() {
+		System.out.println("Ejecutado despues de creado el Bean");
+	}
+	
+	// Ejecucion de codigo despues de apagado el contenedor Spring
+	@PreDestroy // Sustituye al metodo destroy()
+	public void ejecutaAntesDestruccion() {
+		System.out.println("Ejecutando antes de la destruccion del Bean");
+	}
+	
 	/* Spring nos permite hacer la inyeccion de dependencias de varias formas, la primera forma es mediante un Constructor
 	que recibe su correspondiente parametro a inyectar. La segunda forma es mediante un metodo de tipo Setter que al igual
 	que el Constructor reciba el parametro a inyectar. La tercera forma es por medio de un Campo de Clase en la que se aplica 
