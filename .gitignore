@@ -23,3 +23,15 @@
 /PildorasInformaticas/SpringConAnnotations/*.mf
 /PildorasInformaticas/SpringConAnnotations/*.classpath
 /PildorasInformaticas/SpringConAnnotations/*.project
+
+/PildorasInformaticas/SpringMVCEjemplo1/nbproject/
+/PildorasInformaticas/SpringMVCEjemplo1/.settings/
+/PildorasInformaticas/SpringMVCEjemplo1/build/
+/PildorasInformaticas/SpringMVCEjemplo1/dist/
+/PildorasInformaticas/SpringMVCEjemplo1/test/
+/PildorasInformaticas/SpringMVCEjemplo1/out/
+/PildorasInformaticas/SpringMVCEjemplo1/*.xml
+/PildorasInformaticas/SpringMVCEjemplo1/*.mf
+/PildorasInformaticas/SpringMVCEjemplo1/*.classpath
+/PildorasInformaticas/SpringMVCEjemplo1/*.project
+/PildorasInformaticas/SpringMVCEjemplo1/src/main/webapp/WEB-INF/lib/
