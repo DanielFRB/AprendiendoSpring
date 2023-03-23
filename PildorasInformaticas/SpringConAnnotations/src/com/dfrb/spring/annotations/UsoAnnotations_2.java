@@ -21,6 +21,12 @@ public class UsoAnnotations_2 {
         // Usar el Bean
         System.out.println(empleado.getTareas());
         System.out.println(empleado.getInformes());
+        System.out.println("------------------------");
+        
+        // Pedir el 2do Bean
+        Empleados empleado1 = miContexto.getBean("directorFinanciero", Empleados.class);
+        System.out.println(empleado1.getTareas());
+        System.out.println(empleado1.getInformes());
         
         // Cerrar el contexto
         miContexto.close();
