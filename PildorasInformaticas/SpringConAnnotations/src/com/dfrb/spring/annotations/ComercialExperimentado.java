@@ -1,6 +1,7 @@
 package com.dfrb.spring.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -32,6 +33,7 @@ public class ComercialExperimentado implements Empleados {
 	
 	3. Inyeccion de Dependencia mediante Campo de Clase */
 	@Autowired
+	@Qualifier("informeFinancieroTrim2") // Uso de la anotacion @Qualifier para identificar el Bean Id que Spring va a inyectar
     private CreacionInformeFinanciero informeFinanciero;
 
 	@Override
