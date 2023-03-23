@@ -27,6 +27,14 @@ public class UsoAnnotations_2 {
         Empleados empleado1 = miContexto.getBean("directorFinanciero", Empleados.class);
         System.out.println(empleado1.getTareas());
         System.out.println(empleado1.getInformes());
+        System.out.println("------------------------");
+        
+        // Para acceder a los campos de clase de DirectorFinanciero no nos sirve la llamada del Bean anterior que se basa en llamar
+        // objetos de tipo Empleado, si bien DirectorFinanciero implementa Empleados, los campos de clase estan es en la Clase
+        // DirectorFinanciero, por lo que debe pedirse a esta ultima Clase
+        DirectorFinanciero director = miContexto.getBean("directorFinanciero", DirectorFinanciero.class);
+        System.out.println("Email del Director: "+ director.getEmail());
+        System.out.println("Nombre de la Empresa: "+ director.getNombreEmpresa());
         
         // Cerrar el contexto
         miContexto.close();
