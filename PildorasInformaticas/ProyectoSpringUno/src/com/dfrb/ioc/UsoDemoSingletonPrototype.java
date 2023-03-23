@@ -3,7 +3,7 @@ package com.dfrb.ioc;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author danfe
+ * @author dfrb@ne
  */
 
 public class UsoDemoSingletonPrototype {
@@ -29,5 +29,6 @@ public class UsoDemoSingletonPrototype {
         } else {
             System.out.println("Se trata de dos objetos distintos.");
         }
+        context.close();
     }
 }
