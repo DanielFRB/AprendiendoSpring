@@ -2,6 +2,7 @@ package com.dfrb.spring.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
 // nombre de la Clase.
 
 @Component
+@Scope("prototype") // Java Annotation que permite trabajar con los patrones Singleton y Prototype
 public class ComercialExperimentado implements Empleados {
 	/* Spring nos permite hacer la inyeccion de dependencias de varias formas, la primera forma es mediante un Constructor
 	que recibe su correspondiente parametro a inyectar. La segunda forma es mediante un metodo de tipo Setter que al igual
