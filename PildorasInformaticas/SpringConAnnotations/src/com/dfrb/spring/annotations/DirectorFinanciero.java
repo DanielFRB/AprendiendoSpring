@@ -1,6 +1,7 @@
 package com.dfrb.spring.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
  * @author dfrb@ne
@@ -11,6 +12,15 @@ public class DirectorFinanciero implements Empleados {
 	public DirectorFinanciero(CreacionInformeFinanciero informeFinanciero) {
 		this.informeFinanciero = informeFinanciero;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
 
 	@Override
 	public String getTareas() {
@@ -25,4 +35,10 @@ public class DirectorFinanciero implements Empleados {
 	}
 	
 	private CreacionInformeFinanciero informeFinanciero;
+	
+	@Value("${email}")
+	private String email;
+	
+	@Value("${nombreEmpresa}")
+	private String nombreEmpresa;
 }
