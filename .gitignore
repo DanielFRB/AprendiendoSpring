@@ -1,6 +1,7 @@
 /SpringJARFiles/
 
 /PildorasInformaticas/ProyectoSpringUno/nbproject/
+/PildorasInformaticas/ProyectoSpringUno/.settings/
 /PildorasInformaticas/ProyectoSpringUno/build/
 /PildorasInformaticas/ProyectoSpringUno/libs/
 /PildorasInformaticas/ProyectoSpringUno/dist/
@@ -12,6 +13,7 @@
 /PildorasInformaticas/ProyectoSpringUno/*.project
 
 /PildorasInformaticas/SpringConAnnotations/nbproject/
+/PildorasInformaticas/SpringConAnnotations/.settings/
 /PildorasInformaticas/SpringConAnnotations/build/
 /PildorasInformaticas/SpringConAnnotations/libs/
 /PildorasInformaticas/SpringConAnnotations/dist/
