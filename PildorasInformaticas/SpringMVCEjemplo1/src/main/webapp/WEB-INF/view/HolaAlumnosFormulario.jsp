@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Este es un Ejemplo de Formulario</h1>
-  <form action="procesarFormulario" method="GET">
+  <form action="procesarFormulario2" method="GET">
     <label>Ingrese su Nombre:</label>
 	<input type="text" name="nombreAlumno" />
 	<input type="submit" value="Enviar Formulario">
