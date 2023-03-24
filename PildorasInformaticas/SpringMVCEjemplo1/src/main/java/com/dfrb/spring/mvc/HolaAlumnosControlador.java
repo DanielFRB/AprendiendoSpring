@@ -32,6 +32,7 @@ public class HolaAlumnosControlador {
 	}*/
 	
 	// Uso de @RequestParam para sustituir HttpServletRequest
+	@RequestMapping("/procesarFormulario2")
 	public String otroProcesoFormulario(@RequestParam("nombreAlumno") String nombre, Model modelo) {
 		nombre += " es el mejor alumno";
 		String mensajeFinal = "Quien es el mejor Alumno? "+ nombre;
