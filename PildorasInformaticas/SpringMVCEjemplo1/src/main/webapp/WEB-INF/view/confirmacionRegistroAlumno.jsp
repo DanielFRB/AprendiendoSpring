@@ -7,7 +7,8 @@
 		<title>Confirmacion de Registro</title>
 	</head>
 	<body>
-		<p>El alumno de nombre ${miAlumno.nombre} y apellido ${miAlumno.apellido} se ha registrado con exito</p>
+		<p>El alumno ${miAlumno.nombre} ${miAlumno.apellido}, edad: ${miAlumno.edad}. Se ha registrado con exito.</p>
+		<p>Se ha enviado una notificacion a su correo electronico ${miAlumno.email}.</p>
 		<p>La asignatura escogida es: ${miAlumno.optativa}</p>
 		<p>La Ciudad donde iniciara los estudios el alumno es: ${miAlumno.ciudadEstudios}</p>
 		<p>Los Idiomas a estudiar por el alumno son: ${miAlumno.idiomasAlumno}</p>
