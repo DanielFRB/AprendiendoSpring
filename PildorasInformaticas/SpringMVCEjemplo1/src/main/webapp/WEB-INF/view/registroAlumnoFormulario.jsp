@@ -11,12 +11,21 @@
 		<form:form action="procesarFormulario" modelAttribute="miAlumno">
 			<form:label path="nombre">Nombre: </form:label>
 			<form:input path="nombre"/>
+			<form:errors path="nombre"></form:errors>
 			<br/><br/>
 			<form:label path="apellido">Apellido: </form:label>
 			<form:input path="apellido"/>
 			<br/><br/>
+			<form:label path="edad">Edad: </form:label>
+			<form:input path="edad"/>
+			<form:errors path="edad"></form:errors>
+			<br/><br/>
+			<form:label path="email">Email: </form:label>
+			<form:input path="email"/>
+			<form:errors path="email"></form:errors>
+			<br/><br/>
 			<p>Asignaturas Optativas:</p>
-			<form:select path="optativa" multiple="true">
+			<form:select path="optativa">
 				<form:option value="Diseño" label="Diseño"></form:option>
 				<form:option value="Deportes" label="Deportes"></form:option>
 				<form:option value="Comercio" label="Comercio"></form:option>
