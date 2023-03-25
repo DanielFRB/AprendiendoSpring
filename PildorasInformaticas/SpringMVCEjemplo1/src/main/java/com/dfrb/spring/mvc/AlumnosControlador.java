@@ -1,9 +1,14 @@
 package com.dfrb.spring.mvc;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
 
 /**
  * @author dfrb@ne
@@ -20,7 +25,12 @@ public class AlumnosControlador {
 	}
 	
 	@RequestMapping("/procesarFormulario")
-	public String procesarFormulario(@ModelAttribute("miAlumno") Alumno miAlumno) {
-		return "confirmacionRegistroAlumno";
+	public String procesarFormulario(@Valid @ModelAttribute("miAlumno") Alumno miAlumno, BindingResult resultadoValidacion) {
+		if (resultadoValidacion.hasErrors()) {
+			System.out.println(resultadoValidacion.toString());
+			return "registroAlumnoFormulario";
+		} else {
+			return "confirmacionRegistroAlumno";
+		}
 	}
 }
