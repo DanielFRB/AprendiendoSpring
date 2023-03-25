@@ -1,5 +1,7 @@
 package com.dfrb.spring.mvc;
 
+import javax.validation.constraints.*;
+
 /**
  * @author dfrb@ne
  */
@@ -47,10 +49,39 @@ public class Alumno {
 	public void setIdiomasAlumno(String idiomasAlumno) {
 		this.idiomasAlumno = idiomasAlumno;
 	}
+	
+	public int getEdad() {
+		return edad;
+	}
 
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	// Validacion de Formularios en Spring
+	@NotNull
+	@Size(min = 2, message = "Campo Solicitado: No puede estar en blanco")
 	private String nombre;
+	
 	private String apellido;
 	private String optativa;
 	private String ciudadEstudios;
 	private String idiomasAlumno;
+	
+	// Validacion de Formularios en Spring
+	@Min(value = 16, message = "Su Edad no deberia ser menor de 16 años")
+    @Max(value = 110, message = "Su Edad no deberia ser mayor de 110 años")
+    private int edad;
+
+	// Validacion de Formularios en Spring
+    @Email(message = "El Email debe ser valido")
+    private String email;
 }
