@@ -35,3 +35,16 @@
 /PildorasInformaticas/SpringMVCEjemplo1/*.classpath
 /PildorasInformaticas/SpringMVCEjemplo1/*.project
 /PildorasInformaticas/SpringMVCEjemplo1/src/main/webapp/WEB-INF/lib/
+
+/PildorasInformaticas/ProyectoHibernate/nbproject/
+/PildorasInformaticas/ProyectoHibernate/.settings/
+/PildorasInformaticas/ProyectoHibernate/build/
+/PildorasInformaticas/ProyectoHibernate/lib/
+/PildorasInformaticas/ProyectoHibernate/bin/
+/PildorasInformaticas/ProyectoHibernate/dist/
+/PildorasInformaticas/ProyectoHibernate/test/
+/PildorasInformaticas/ProyectoHibernate/out/
+/PildorasInformaticas/ProyectoHibernate/*.xml
+/PildorasInformaticas/ProyectoHibernate/*.mf
+/PildorasInformaticas/ProyectoHibernate/*.classpath
+/PildorasInformaticas/ProyectoHibernate/*.project
