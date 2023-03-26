@@ -12,6 +12,7 @@ public class PruebaConexionJDBC {
 			System.out.println("Conectando con la BBDD"+ jdbcUrl);
 			Connection connection = DriverManager.getConnection(jdbcUrl, user, key);
 			System.out.println("Conexion exitosa!!!");
+			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
