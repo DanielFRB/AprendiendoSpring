@@ -24,6 +24,10 @@
 			<form:input path="email"/>
 			<form:errors path="email"></form:errors>
 			<br/><br/>
+			<form:label path="codigoPostal">Codigo Postal: </form:label>
+			<form:input path="codigoPostal"/>
+			<form:errors path="codigoPostal"></form:errors>
+			<br/><br/>
 			<p>Asignaturas Optativas:</p>
 			<form:select path="optativa">
 				<form:option value="Diseño" label="Diseño"></form:option>
