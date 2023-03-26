@@ -4,6 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+/**
+ * @author dfrb@ne
+ */
+
 public class PruebaGuardaCliente {
 	public static void main(String[] args) {
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Clientes.class).buildSessionFactory();
@@ -22,6 +26,9 @@ public class PruebaGuardaCliente {
 			System.out.println("Registro: "+ cltRecuperado.toString());
 			session.getTransaction().commit();
 			System.out.println("Terminado!!!");
+			
+			// Hacer el commit
+			session.getTransaction().commit();
 			
 			// Cierre de la Sesion para liberar recursos
 			session.close();
