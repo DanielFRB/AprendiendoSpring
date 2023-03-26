@@ -2,6 +2,8 @@ package com.dfrb.spring.mvc;
 
 import javax.validation.constraints.*;
 
+import com.dfrb.spring.mvc.validations.CodPostalMadrid;
+
 /**
  * @author dfrb@ne
  */
@@ -94,7 +96,10 @@ public class Alumno {
     @Email(message = "El Email debe ser valido")
     private String email;
     
- // Validacion de Formularios en Spring con Expresiones Regulares
-    @Pattern(regexp = "[0-9]{5}", message = "Solo 5 valores numericos")
+    // Validacion de Formularios en Spring con Expresiones Regulares
+    // @Pattern(regexp = "[0-9]{5}", message = "Solo 5 valores numericos")
+    
+    // Validacion CodigoPostal personalizada
+    @CodPostalMadrid
     private String codigoPostal;
 }
