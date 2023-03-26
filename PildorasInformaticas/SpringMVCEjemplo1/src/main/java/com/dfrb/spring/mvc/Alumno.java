@@ -65,6 +65,15 @@ public class Alumno {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
+	public String getCodigoPostal() {
+		return codigoPostal;
+	}
+
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
+	}
 
 	// Validacion de Formularios en Spring
 	@NotNull
@@ -84,4 +93,8 @@ public class Alumno {
 	// Validacion de Formularios en Spring
     @Email(message = "El Email debe ser valido")
     private String email;
+    
+ // Validacion de Formularios en Spring con Expresiones Regulares
+    @Pattern(regexp = "[0-9]{5}", message = "Solo 5 valores numericos")
+    private String codigoPostal;
 }
