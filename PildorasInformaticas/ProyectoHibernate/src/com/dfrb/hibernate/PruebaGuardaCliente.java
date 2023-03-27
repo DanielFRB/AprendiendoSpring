@@ -13,7 +13,7 @@ public class PruebaGuardaCliente {
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Clientes.class).buildSessionFactory();
 		Session session = factory.openSession();
 		try {
-			Clientes clt1 = new Clientes("Barack", "Rondon Machado", "Guanare");
+			Clientes clt1 = new Clientes("Oswaldo Manuel", "Lopez Machado", "La Plata");
 			session.beginTransaction();
 			session.save(clt1);
 			session.getTransaction().commit();
