@@ -21,18 +21,18 @@ public class ObtenerCliente {
 			session.beginTransaction();
 
 			// Se obtienen los detalles del cliente
-			DetalleCliente detalleCliente = session.get(DetalleCliente.class, 1);
-			System.out.println(detalleCliente.toString());
-			
-			// Obtiene al cliente
-			System.out.println(detalleCliente.getCliente().toString());
-			
-			// Hacer el commit
-			session.getTransaction().commit();
-
-			// Cierre de la Sesion para liberar recursos
-			session.close();
+			DetalleCliente detalleCliente = session.get(DetalleCliente.class, 2);
+			if (detalleCliente != null) {
+				System.out.println(detalleCliente.toString());
+				// Obtiene al cliente
+				System.out.println(detalleCliente.getCliente().toString());
+				// Hacer el commit
+				session.getTransaction().commit();
+			} else {
+				System.out.println("Cliente NO encontrado en la BBDD");
+			}
 		} finally {
+			session.close();
 			factory.close();
 		}
 	}
