@@ -48,3 +48,16 @@
 /PildorasInformaticas/ProyectoHibernate/*.mf
 /PildorasInformaticas/ProyectoHibernate/*.classpath
 /PildorasInformaticas/ProyectoHibernate/*.project
+
+/PildorasInformaticas/ProyectoRelacionesHibernate/nbproject/
+/PildorasInformaticas/ProyectoRelacionesHibernate/.settings/
+/PildorasInformaticas/ProyectoRelacionesHibernate/build/
+/PildorasInformaticas/ProyectoRelacionesHibernate/lib/
+/PildorasInformaticas/ProyectoRelacionesHibernate/bin/
+/PildorasInformaticas/ProyectoRelacionesHibernate/dist/
+/PildorasInformaticas/ProyectoHProyectoRelacionesHibernateibernate/test/
+/PildorasInformaticas/ProyectoRelacionesHibernate/out/
+/PildorasInformaticas/ProyectoRelacionesHibernate/*.xml
+/PildorasInformaticas/ProyectoRelacionesHibernate/*.mf
+/PildorasInformaticas/ProyectoRelacionesHibernate/*.classpath
+/PildorasInformaticas/ProyectoRelacionesHibernate/*.project
