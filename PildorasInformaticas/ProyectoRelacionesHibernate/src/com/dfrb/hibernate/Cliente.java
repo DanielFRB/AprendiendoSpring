@@ -1,5 +1,7 @@
 package com.dfrb.hibernate;
 
+import java.util.*;
+
 import javax.persistence.*;
 
 /**
@@ -57,6 +59,15 @@ public class Cliente {
 	public void setDetalleCliente(DetalleCliente detalleCliente) {
 		this.detalleCliente = detalleCliente;
 	}
+	
+	// Metodo para agregar pedidos a un cliente
+	public void agregarPedido(Pedido pedido) {
+		if (pedidos == null) {
+			pedidos = new ArrayList<>();
+		}
+		pedidos.add(pedido);
+		pedido.setCliente(this);
+	}
 
 	@Override
 	public String toString() {
@@ -81,4 +92,7 @@ public class Cliente {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id")
 	private DetalleCliente detalleCliente;
+	
+	@OneToMany(mappedBy = "cliente", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+	private List<Pedido> pedidos;
 }
