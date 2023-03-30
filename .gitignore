@@ -60,15 +60,15 @@
 /PildorasInformaticas/ProyectoRelacionesHibernate/*.classpath
 /PildorasInformaticas/ProyectoRelacionesHibernate/*.project
 
-/PildorasInformaticas/PruebaGestrionCRUD/nbproject/
-/PildorasInformaticas/PruebaGestrionCRUD/.settings/
-/PildorasInformaticas/PruebaGestrionCRUD/build/
-/PildorasInformaticas/PruebaGestrionCRUD/dist/
-/PildorasInformaticas/PruebaGestrionCRUD/test/
-/PildorasInformaticas/PruebaGestrionCRUD/out/
-/PildorasInformaticas/PruebaGestrionCRUD/*.xml
-/PildorasInformaticas/PruebaGestrionCRUD/*.mf
-/PildorasInformaticas/PruebaGestrionCRUD/*.classpath
-/PildorasInformaticas/PruebaGestrionCRUD/*.project
-/PildorasInformaticas/PruebaGestrionCRUD/src/main/webapp/WEB-INF/lib/
+/PildorasInformaticas/PruebaGestionCRUD/nbproject/
+/PildorasInformaticas/PruebaGestionCRUD/.settings/
+/PildorasInformaticas/PruebaGestionCRUD/build/
+/PildorasInformaticas/PruebaGestionCRUD/dist/
+/PildorasInformaticas/PruebaGestionCRUD/test/
+/PildorasInformaticas/PruebaGestionCRUD/out/
+/PildorasInformaticas/PruebaGestionCRUD/*.xml
+/PildorasInformaticas/PruebaGestionCRUD/*.mf
+/PildorasInformaticas/PruebaGestionCRUD/*.classpath
+/PildorasInformaticas/PruebaGestionCRUD/*.project
+/PildorasInformaticas/PruebaGestionCRUD/src/main/webapp/WEB-INF/lib/
 
