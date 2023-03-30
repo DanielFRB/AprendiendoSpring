@@ -26,7 +26,9 @@ public class ObtenerPedidosCliente {
 			System.out.println("Cliente: "+ cliente.toString());
 			
 			// Imprimir los Pedidos por Cliente
-			System.out.println("Pedidos: "+ cliente.getPedidos());
+			for (Pedido p: cliente.getPedidos()) {
+				System.out.println(p);
+			}
 			
 			// Hacer el commit
 			session.getTransaction().commit();
