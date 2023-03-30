@@ -60,6 +60,14 @@ public class Cliente {
 		this.detalleCliente = detalleCliente;
 	}
 	
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+
 	// Metodo para agregar pedidos a un cliente
 	public void agregarPedido(Pedido pedido) {
 		if (pedidos == null) {
