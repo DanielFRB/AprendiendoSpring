@@ -21,12 +21,12 @@ public class CrearPedidosCliente {
 			session.beginTransaction();
 			
 			// Obtener el Cliente
-			Cliente cliente = session.get(Cliente.class, 3);
+			Cliente cliente = session.get(Cliente.class, 4);
 			
 			// Crear Pedidos del Cliente;
-			Pedido ped1 = new Pedido(new Date(120, 6, 4));
-			Pedido ped2 = new Pedido(new Date(120, 3, 14));
-			Pedido ped3 = new Pedido(new Date(120, 7, 24));
+			Pedido ped1 = new Pedido(new GregorianCalendar(2021, 6, 4));
+			Pedido ped2 = new Pedido(new GregorianCalendar(2020, 3, 14));
+			Pedido ped3 = new Pedido(new GregorianCalendar(2019, 7, 24));
 			
 			// Agregar Pedidos al Cliente
 			cliente.agregarPedido(ped1);
