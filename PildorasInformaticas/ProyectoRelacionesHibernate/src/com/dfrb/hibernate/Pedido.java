@@ -1,6 +1,7 @@
 package com.dfrb.hibernate;
 
-import java.util.Date;
+import java.util.*;
+
 import javax.persistence.*;
 
 /**
@@ -10,7 +11,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "pedido")
 public class Pedido {
-	public Pedido(Date fechaPago) {
+	public Pedido() {
+	}
+
+	public Pedido(GregorianCalendar fechaPago) {
 		this.fechaPago = fechaPago;
 	}
 	
@@ -49,7 +53,7 @@ public class Pedido {
 	private int id;
 	
 	@Column(name = "fecha_pago")
-	private Date fechaPago;
+	private GregorianCalendar fechaPago;
 	
 	@Column(name = "forma_pago")
 	private String formaPago;
