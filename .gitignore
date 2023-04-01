@@ -32,6 +32,7 @@
 /PildorasInformaticas/SpringMVCEjemplo1/*.mf
 /PildorasInformaticas/SpringMVCEjemplo1/*.classpath
 /PildorasInformaticas/SpringMVCEjemplo1/*.project
+/PildorasInformaticas/SpringMVCEjemplo1/src/conf/
 /PildorasInformaticas/SpringMVCEjemplo1/src/main/webapp/WEB-INF/lib/
 
 /PildorasInformaticas/ProyectoHibernate/nbproject/
@@ -70,6 +71,7 @@
 /PildorasInformaticas/PruebaGestionCRUD/*.mf
 /PildorasInformaticas/PruebaGestionCRUD/*.classpath
 /PildorasInformaticas/PruebaGestionCRUD/*.project
+/PildorasInformaticas/SpringMVCEjemplo1/src/conf/
 /PildorasInformaticas/PruebaGestionCRUD/src/main/webapp/WEB-INF/lib/
 /PildorasInformaticas/PruebaGestionCRUD/src/main/webapp/META-INF/
 
