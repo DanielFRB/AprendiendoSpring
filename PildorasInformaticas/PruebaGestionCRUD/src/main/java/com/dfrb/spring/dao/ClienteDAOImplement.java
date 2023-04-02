@@ -31,6 +31,16 @@ public class ClienteDAOImplement implements ClienteDAO {
 	List<Cliente> clientes = consultaClientes.getResultList();
 	return clientes;
     }
+    
+    @Override
+    @Transactional
+    public void insertarCliente(Cliente cliente) {
+        // Obtener la sesion
+	Session session = sessionFactory.getCurrentSession();
+        
+        // Insertar el Cliente en la BBDD
+        session.save(cliente);
+    }
 	
     @Autowired
     private SessionFactory sessionFactory;
