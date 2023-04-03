@@ -11,12 +11,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css"/>
-        <title>Agregando Nuevo Cliente</title>
+        <title>Modulo de Clientes</title>
     </head>
     <body>
         <div class="regisform">
             <form:form cssClass="form" action="insertaCliente" modelAttribute="cliente" method="POST">
-                <h1 class="titulo">Nuevo Cliente</h1>
+                <form:hidden path="id"/>
+                <h1 class="titulo">Clientes</h1>
                 <div class="inputCont">
                     <form:label cssClass="label" path="nombre">Nombre: </form:label>
                     <form:input cssClass="input" path="nombre"/>
@@ -32,7 +33,7 @@
                     <form:input cssClass="input" path="email"/>
                 </div>
                 <br/><br/>
-                <input type="submit" class="submitBtn" value="Insertar"/>
+                <input type="submit" class="submitBtn" value="Guardar"/>
             </form:form>
         </div>
     </body>
