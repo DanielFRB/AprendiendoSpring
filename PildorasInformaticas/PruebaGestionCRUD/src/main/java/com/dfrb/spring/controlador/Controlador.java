@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.dfrb.spring.dao.ClienteDAO;
 import com.dfrb.spring.entidad.Cliente;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author dfrb@ne
@@ -40,6 +42,23 @@ public class Controlador {
     public String insertaCliente(@ModelAttribute("cliente") Cliente cliente) {
         // Insertar Cliente en la BBDD
         clienteDAO.insertarCliente(cliente);
+        return "redirect:/cliente/lista";
+    }
+    
+    @GetMapping("modificaCliente")
+    public String modificaCliente(@RequestParam("id") int id, Model model) {
+        // Obtener el Cliente
+        Cliente cliente = clienteDAO.getCliente(id);
+        // Pasar el Objeto Cliente al Modelo
+        model.addAttribute("cliente", cliente);
+        // Enviar al Formulario
+        return "nuevoCliente";
+    }
+    
+    @GetMapping("eliminaCliente")
+    public String eliminaCliente(@RequestParam("id") int id) {
+        // Eliminar el Cliente
+        clienteDAO.deleteCliente(id);
         return "redirect:/cliente/lista";
     }
 	
