@@ -23,25 +23,28 @@
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Email</th>
-                    <th>Opciones</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
                 <c:forEach var="c" items="${clientes}">
-                    <%--  <c:url var="linkCargar" value="Pro.ductController">
-                          <c:param name="instruccion" value="cargar"></c:param>
-                          <c:param name="id" value="${c.id}"></c:param>
-                        </c:url>
-                        <c:url var="linkEliminar" value="ProductController">
-                        <c:param name="instruccion" value="eliminar"></c:param>
-                        <c:param name="codArticulo" value="${p.codArticulo}"></c:param>
-                        </c:url> --%>
+                    <c:url var="linkModificar" value="/cliente/modificaCliente">
+                        <c:param name="id" value="${c.id}"></c:param>
+                    </c:url>
+                    <c:url var="linkEliminar" value="/cliente/eliminaCliente">
+                        <c:param name="id" value="${c.id}"></c:param>
+                    </c:url>
                     <tr>
                         <td>${c.nombre}</td>
                         <td>${c.apellido}</td>
                         <td>${c.email}</td>
                         <td>
-                            <a href="">Ver Pedidos</a>
+                            <a href="${linkModificar}"><input type="button" value="Modificar"/></a>
+                        </td>
+                        <td>
+                            <a href="${linkEliminar}"><input type="button" value="Eliminar" 
+                                onclick="if (!(confirm('Está seguro de Eliminar el registro?'))) return false"/></a>
                         </td>
                     </tr>
                 </c:forEach>
