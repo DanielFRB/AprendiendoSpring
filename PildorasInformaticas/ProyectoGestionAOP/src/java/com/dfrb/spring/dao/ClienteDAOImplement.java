@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClienteDAOImplement {
     public void insertaCliente() {
-        System.out.println("Cliente agregado a la BBDD");
+        System.out.println("Se a agregado un nuevo Cliente a la BBDD");
     }
 }
