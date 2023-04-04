@@ -75,3 +75,16 @@
 /PildorasInformaticas/PruebaGestionCRUD/src/main/webapp/WEB-INF/lib/
 /PildorasInformaticas/PruebaGestionCRUD/src/main/webapp/META-INF/
 
+/PildorasInformaticas/ProyectoGestionAOP/nbproject/
+/PildorasInformaticas/ProyectoGestionAOP/.settings/
+/PildorasInformaticas/ProyectoGestionAOP/build/
+/PildorasInformaticas/ProyectoGestionAOP/dist/
+/PildorasInformaticas/ProyectoGestionAOP/test/
+/PildorasInformaticas/ProyectoGestionAOP/out/
+/PildorasInformaticas/ProyectoGestionAOP/*.xml
+/PildorasInformaticas/ProyectoGestionAOP/*.mf
+/PildorasInformaticas/ProyectoGestionAOP/*.classpath
+/PildorasInformaticas/ProyectoGestionAOP/*.project
+/PildorasInformaticas/ProyectoGestionAOP/src/conf/
+/PildorasInformaticas/ProyectoGestionAOP/web/WEB-INF/lib/
+/PildorasInformaticas/ProyectoGestionAOP/web/META-INF/
