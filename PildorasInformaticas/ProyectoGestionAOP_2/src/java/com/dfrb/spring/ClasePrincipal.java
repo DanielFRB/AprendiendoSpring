@@ -16,6 +16,8 @@ public class ClasePrincipal {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Configuracion.class);
         // Obtener el Bean del contenedor de Spring
         Cliente clt = new Cliente();
+        clt.setNombre("Daniel Rondón");
+        clt.setTipo("Cliente Normal");
         ClienteDAOImplement cliente = context.getBean("clienteDAOImplement", ClienteDAOImplement.class);
         ClienteVIPDAOImplement clientevip = context.getBean("clienteVIPDAOImplement", ClienteVIPDAOImplement.class);
         // Llamar al metodo
