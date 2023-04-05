@@ -11,7 +11,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LoginConAspecto {
-    @Before("execution(* insertaCliente*())") // Aplicando un Pointcut expression (*) al final del nombre del metodo
+    // Colocando dos puntos dentro de los parentesis del metodo le indica al aspecto de debe trabajar tanto con metodos
+    // que reciben parametros como con los que no lo reciben
+    @Before("execution(* insertaCliente*(..))") // Aplicando un Pointcut expression (*) al final del nombre del metodo
     public void antesInsertarCliente() {
         System.out.println("El usuario esta logueado correctamente");
         System.out.println("El perfil del usuario para Insertar Cliente es correcto");
