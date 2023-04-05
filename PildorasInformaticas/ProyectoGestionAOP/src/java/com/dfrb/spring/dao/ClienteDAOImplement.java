@@ -1,5 +1,6 @@
 package com.dfrb.spring.dao;
 
+import com.dfrb.spring.aop.Cliente;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ClienteDAOImplement {
-    public void insertaCliente() {
+    public void insertaCliente(Cliente cliente) {
         System.out.println("Se a agregado un nuevo Cliente a la BBDD");
     }
 }
