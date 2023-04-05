@@ -1,5 +1,7 @@
 package com.dfrb.spring.aspectos;
 
+import com.dfrb.spring.aop.Cliente;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -19,8 +21,18 @@ public class LoginConAspecto {
     }
     
     @Before("paraClientes()")
-    public void antesInsertarCliente() {
+    // Se crea un JoinPont para poder acceder a los parametros del metodo especificado en el Pointcut si el metodo contiene alguno
+    public void antesInsertarCliente(JoinPoint point) {
         System.out.println("El usuario esta logueado correctamente");
         System.out.println("El perfil del usuario para Insertar Cliente es correcto");
+        Object[] parametros = point.getArgs();
+        for (Object p : parametros) {
+            if (p instanceof Cliente) {
+                Cliente cliente = (Cliente) p;
+                System.out.println("El nombre del Cliente es: "+ cliente.getNombre());
+                System.out.println("El tipo de Cliente es: "+ cliente.getTipo());
+            }
+        }
+        
     }
 }
