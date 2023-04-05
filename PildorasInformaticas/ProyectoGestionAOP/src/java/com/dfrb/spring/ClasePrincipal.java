@@ -2,6 +2,7 @@ package com.dfrb.spring;
 
 import com.dfrb.spring.aop.Configuracion;
 import com.dfrb.spring.dao.ClienteDAOImplement;
+import com.dfrb.spring.dao.ClienteVIPDAOImplement;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -14,8 +15,11 @@ public class ClasePrincipal {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Configuracion.class);
         // Obtener el Bean del contenedor de Spring
         ClienteDAOImplement cliente = context.getBean("clienteDAOImplement", ClienteDAOImplement.class);
+        ClienteVIPDAOImplement clientevip = context.getBean("clienteVIPDAOImplement", ClienteVIPDAOImplement.class);
         // Llamar al metodo
         cliente.insertaCliente();
+        System.out.println("------------------------");
+        clientevip.insertaClienteVIP(); // Por medio del Pointcut se puede ejecutar el aspecto sobre este metodo tambien
         // Cerrar el Contexto
         context.close();
     }
