@@ -37,6 +37,11 @@ public class LoginConAspecto {
         }
     }
     
+    @After("paraGetClientesList()")
+    public void processAlwaysAfterGetClientesList(JoinPoint point) {
+        System.out.println("Ejecutanto las tareas programadas siempre...");
+    }
+    
     // Se ejecutan tareas automaticas despues de lanzarse una Excepcion en el metodo getClientesList()
     @AfterThrowing(pointcut = "paraGetClientesList()", throwing = "Excepcion")
     public void processAfterExceptionGetClientesList(Throwable Excepcion) {
