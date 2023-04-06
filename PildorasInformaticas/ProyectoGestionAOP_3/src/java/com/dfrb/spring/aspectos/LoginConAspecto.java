@@ -4,6 +4,7 @@ import com.dfrb.spring.aop.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,19 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(2)
 public class LoginConAspecto {
+    // Ejecuta tareas antes y después de llamarse a un metodo específico.
+    @Around("execution(* com.dfrb.spring.servicios.*.getServicio(..))")
+    public Object ejecutarServicio(ProceedingJoinPoint point) throws Throwable {
+        System.out.println("--- Comienzo de tareas antes de ejecutarse el método ---");
+        long inicio = System.currentTimeMillis();
+        Object resultado = point.proceed(); // point apunta al método destino, aqui es cuando se ejecuta.
+        long fin = System.currentTimeMillis();
+        long duracion = fin - inicio;
+        System.out.println("El método tadó "+ duracion/1000 +" segundos.");
+        System.out.println("--- Comienzo de tareas después de ejecutado el método ---");
+        return resultado;
+    }
+    
     // Pointcut para el metodo getClientesList()
     @Pointcut("execution(* com.dfrb.spring.dao.ClienteDAOImplement.getClientesList(..))")
     public void paraGetClientesList() {
