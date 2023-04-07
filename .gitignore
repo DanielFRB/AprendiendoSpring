@@ -121,3 +121,15 @@
 
 /PildorasInformaticas/ProyectoWebMaven/target/
 /PildorasInformaticas/ProyectoWebMaven/src/main/webapp/META-INF/
+
+/PildorasInformaticas/SpringSecurityProject/nbproject/
+/PildorasInformaticas/SpringSecurityProject/target/
+/PildorasInformaticas/SpringSecurityProject/.settings/
+/PildorasInformaticas/SpringSecurityProject/build/
+/PildorasInformaticas/SpringSecurityProject/dist/
+/PildorasInformaticas/SpringSecurityProject/src/test/
+/PildorasInformaticas/SpringSecurityProject/*.classpath
+/PildorasInformaticas/SpringSecurityProject/*.project
+/PildorasInformaticas/SpringSecurityProject/src/conf/
+/PildorasInformaticas/SpringSecurityProject/src/main/webapp/WEB-INF/lib/
+/PildorasInformaticas/SpringSecurityProject/src/main/webapp/META-INF/
