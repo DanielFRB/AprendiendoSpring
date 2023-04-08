@@ -32,6 +32,8 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().anyRequest().authenticated().and().formLogin()
                 .loginPage("/formLogin")
                 .loginProcessingUrl("/userAuthentication")
+                .permitAll()
+                .and().logout() // Usuarios pueden cerrar sesión
                 .permitAll();
     }
 }
