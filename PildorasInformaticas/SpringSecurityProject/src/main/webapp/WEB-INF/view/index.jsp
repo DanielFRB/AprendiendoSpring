@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +15,9 @@
     </head>
     <body>
         <h1>Hello my dear World!</h1>
+        <p>Usuario: <security:authentication property="principal.username"/></p>
+        <p>Su Rol es: <security:authentication property="principal.authorities"/></p>
+        <p><a href="${pageContext.request.contextPath}/admin">Zona de Administrador</a></p>
         <form:form action="${pageContext.request.contextPath}/logout" method="POST">
             <input type="submit" value="Cerrar Sesión"/>
         </form:form>
