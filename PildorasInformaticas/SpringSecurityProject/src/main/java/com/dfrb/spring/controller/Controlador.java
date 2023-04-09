@@ -13,4 +13,9 @@ public class Controlador {
     public String showInicio() {
         return "index";
     }
+    
+    @GetMapping("/admin")
+    public String showAdminZone() {
+        return "adminZone";
+    }
 }
