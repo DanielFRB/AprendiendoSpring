@@ -20,16 +20,19 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
         // Código momentáneo mientras creamos la BBDD
         UserBuilder usuario = User.withDefaultPasswordEncoder();
         auth.inMemoryAuthentication()
-                .withUser(usuario.username("Daniel").password("1234").roles("EMPLO"))
-                .withUser(usuario.username("Yaneth").password("4567").roles("ADMIN"))
-                .withUser(usuario.username("Oswaldo").password("7890").roles("EMPLO"))
-                .withUser(usuario.username("Barack").password("0123").roles("ADMIN"));
+                .withUser(usuario.username("Daniel").password("1234").roles("USER"))
+                .withUser(usuario.username("Yaneth").password("4567").roles("USER", "ADMIN"))
+                .withUser(usuario.username("Oswaldo").password("7890").roles("USER"))
+                .withUser(usuario.username("Barack").password("0123").roles("USER", "ADMIN"));
         
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated().and().formLogin()
+        //http.authorizeRequests().anyRequest().authenticated().and().formLogin()
+        http.authorizeRequests().antMatchers("/").hasRole("USER")
+                .antMatchers("/admin/**").hasRole("ADMIN")
+                .and().formLogin()
                 .loginPage("/formLogin")
                 .loginProcessingUrl("/userAuthentication")
                 .permitAll()
