@@ -18,4 +18,9 @@ public class Controlador {
     public String showAdminZone() {
         return "adminZone";
     }
+    
+    @GetMapping("/accessDenied")
+    public String showAccessDenied() {
+        return "accessDenied";
+    }
 }
