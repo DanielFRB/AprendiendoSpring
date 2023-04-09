@@ -13,5 +13,7 @@
     </head>
     <body>
         <h1>Disculpe!!!, Tu perfil no tiene acceso para ingresar a este enlace</h1>
+        <br/>
+        <p><a href="${pageContext.request.contextPath}/">Volver a Inicio</a></p>
     </body>
 </html>
