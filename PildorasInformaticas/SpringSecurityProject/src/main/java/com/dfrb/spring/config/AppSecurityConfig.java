@@ -37,6 +37,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/userAuthentication")
                 .permitAll()
                 .and().logout() // Usuarios pueden cerrar sesión
-                .permitAll();
+                .permitAll()
+                .and().exceptionHandling().accessDeniedPage("/accessDenied"); // Configurando Página de error
     }
 }
