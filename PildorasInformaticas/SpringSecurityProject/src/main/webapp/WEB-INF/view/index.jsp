@@ -17,7 +17,9 @@
         <h1>Hello my dear World!</h1>
         <p>Usuario: <security:authentication property="principal.username"/></p>
         <p>Su Rol es: <security:authentication property="principal.authorities"/></p>
-        <p><a href="${pageContext.request.contextPath}/admin">Zona de Administrador</a></p>
+        <security:authorize access="hasRole('ADMIN')">
+            <p><a href="${pageContext.request.contextPath}/admin">Zona de Administrador</a></p>
+        </security:authorize>
         <form:form action="${pageContext.request.contextPath}/logout" method="POST">
             <input type="submit" value="Cerrar Sesión"/>
         </form:form>
