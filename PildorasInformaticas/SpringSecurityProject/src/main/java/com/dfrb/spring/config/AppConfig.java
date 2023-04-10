@@ -21,11 +21,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = "com.dfrb.spring")
 @PropertySource("classpath:application.properties")
 public class AppConfig {
-    @Autowired
-    private Environment env;
-    
-    private final Logger logger = Logger.getLogger(getClass().getName());
-    
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -67,4 +62,9 @@ public class AppConfig {
     private int getPropPool(String propName) {
         return Integer.parseInt(env.getProperty(propName));
     }
+    
+    @Autowired
+    private Environment env;
+    
+    private final Logger logger = Logger.getLogger(getClass().getName());
 }
