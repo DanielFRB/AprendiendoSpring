@@ -145,3 +145,16 @@
 /PildorasInformaticas/PruebasREST/src/conf/
 /PildorasInformaticas/PruebasREST/src/main/webapp/WEB-INF/lib/
 /PildorasInformaticas/PruebasREST/src/main/webapp/META-INF/
+
+/PildorasInformaticas/SpringRestProject/nbproject/
+/PildorasInformaticas/SpringRestProject/target/
+/PildorasInformaticas/SpringRestProject/.settings/
+/PildorasInformaticas/SpringRestProject/build/
+/PildorasInformaticas/SpringRestProject/dist/
+/PildorasInformaticas/SpringRestProject/src/test/
+/PildorasInformaticas/SpringRestProject/*.classpath
+/PildorasInformaticas/SpringRestProject/*.project
+/PildorasInformaticas/SpringRestProject/src/conf/
+/PildorasInformaticas/SpringRestProject/src/main/webapp/WEB-INF/lib/
+/PildorasInformaticas/SpringRestProject/src/main/webapp/META-INF/
+
