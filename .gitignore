@@ -133,3 +133,15 @@
 /PildorasInformaticas/SpringSecurityProject/src/conf/
 /PildorasInformaticas/SpringSecurityProject/src/main/webapp/WEB-INF/lib/
 /PildorasInformaticas/SpringSecurityProject/src/main/webapp/META-INF/
+
+/PildorasInformaticas/PruebasREST/nbproject/
+/PildorasInformaticas/PruebasREST/target/
+/PildorasInformaticas/PruebasREST/.settings/
+/PildorasInformaticas/PruebasREST/build/
+/PildorasInformaticas/PruebasREST/dist/
+/PildorasInformaticas/PruebasREST/src/test/
+/PildorasInformaticas/PruebasREST/*.classpath
+/PildorasInformaticas/PruebasREST/*.project
+/PildorasInformaticas/PruebasREST/src/conf/
+/PildorasInformaticas/PruebasREST/src/main/webapp/WEB-INF/lib/
+/PildorasInformaticas/PruebasREST/src/main/webapp/META-INF/
