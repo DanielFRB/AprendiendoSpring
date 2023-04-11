@@ -1,0 +1,16 @@
+{
+    "id" : 2,
+    "nombre" : "Daniel",
+    "apellido" : "Rondón",
+    "activo" : true,
+    "idiomas" : ["Inglés", "Español", "Chino"],
+    "edad" : "46",
+    
+    "datos_registro" : {
+        "domicilio" : "Calle El Mirador",
+        "ciudad" : "Guanare",
+        "codigo_postal" : "3350",
+        "pais" : "Venezuela",
+        "fecha_alta" : "04/11/2023"
+    }
+}
