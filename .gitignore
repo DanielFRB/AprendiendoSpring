@@ -164,6 +164,7 @@
 /SpringBackEndSecurity/build/
 /SpringBackEndSecurity/dist/
 /SpringBackEndSecurity/*.classpath
+/SpringBackEndSecurity/nbactions.xml
 /SpringBackEndSecurity/*.project
 /SpringBackEndSecurity/src/test/
 /SpringBackEndSecurity/src/main/resources/static/
