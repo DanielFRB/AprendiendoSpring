@@ -12,6 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Table(name = "AUTH_USER_DETAILS")
 @Entity
 public class User implements UserDetails {
+    public User() {
+        
+    }
     // Métodos sobrescritos de la Interface UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -65,6 +68,14 @@ public class User implements UserDetails {
         this.userName = userName;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+    
     public Date getCreatedAt() {
         return createdAt;
     }
@@ -111,6 +122,10 @@ public class User implements UserDetails {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void setAuthorities(List<Authority> authorities) {
+        this.authorities = authorities;
     }
     
     // Campos de Clase
