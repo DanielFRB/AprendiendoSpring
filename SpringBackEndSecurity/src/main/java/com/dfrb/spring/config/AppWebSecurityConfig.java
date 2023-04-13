@@ -27,23 +27,24 @@ public class AppWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // http.authorizeRequests().anyRequest().permitAll(); // Permite el acceso a todos sin pasar por ningun formulario de acceso
-        http.authorizeRequests().anyRequest().authenticated(); // Obliga a que el usuario sea autenticado
+        /*  http.authorizeRequests().anyRequest().authenticated(); // Obliga a que el usuario sea autenticado
         http.formLogin(); // Coloca el formulario de acceso al inicio de la aplicación
-        http.httpBasic(); // Configura Autorizacion Básica
+        http.httpBasic(); // Configura Autorizacion Básica */
+        
+        http.authorizeRequests((request) -> request.antMatchers("h2-console/**").permitAll().anyRequest().authenticated()).httpBasic();
+        http.formLogin();
+        
+        // Consola h2
+        http.csrf().disable().headers().frameOptions().disable();
     }
     
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // Se implementa un usuario y una contraseña para poder ingresar a la aplicación
-        // Se hace uso del @Bean passwordEncoder() para encriptar la contraseña
-        // Al implementar la autenticacion por BBDD la siguiente instruccion de autenticacion inMemory
-        // debe ser eliminada o comentada
-        // auth.inMemoryAuthentication().withUser("Daniel").password(passwordEncoder().encode("12345")).authorities("USER", "ADMIN");
-        
         // Autenticacion por BBDD utilizando UserServices
         auth.userDetailsService(userServices).passwordEncoder(passwordEncoder());
     }
     
+    // Inyeccion del Servicio
     @Autowired
     private UserServices userServices;
 }
