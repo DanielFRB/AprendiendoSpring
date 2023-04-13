@@ -1,5 +1,7 @@
 package com.dfrb.spring.config;
 
+import com.dfrb.spring.services.UserServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -34,6 +36,14 @@ public class AppWebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         // Se implementa un usuario y una contraseña para poder ingresar a la aplicación
         // Se hace uso del @Bean passwordEncoder() para encriptar la contraseña
-        auth.inMemoryAuthentication().withUser("Daniel").password(passwordEncoder().encode("12345")).authorities("USER", "ADMIN");
+        // Al implementar la autenticacion por BBDD la siguiente instruccion de autenticacion inMemory
+        // debe ser eliminada o comentada
+        // auth.inMemoryAuthentication().withUser("Daniel").password(passwordEncoder().encode("12345")).authorities("USER", "ADMIN");
+        
+        // Autenticacion por BBDD utilizando UserServices
+        auth.userDetailsService(userServices).passwordEncoder(passwordEncoder());
     }
+    
+    @Autowired
+    private UserServices userServices;
 }
