@@ -10,6 +10,10 @@ import org.springframework.security.core.GrantedAuthority;
 @Table(name = "AUTH_AUTHORITY")
 @Entity
 public class Authority implements GrantedAuthority {
+    public Authority() {
+        
+    }
+    
     // Métodos sobresctitos de la Interface GrantedAuthority
     @Override
     public String getAuthority() {
