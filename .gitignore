@@ -158,3 +158,14 @@
 /PildorasInformaticas/SpringRestProject/src/main/webapp/WEB-INF/lib/
 /PildorasInformaticas/SpringRestProject/src/main/webapp/META-INF/
 
+/SpringBackEndSecurity/nbproject/
+/SpringBackEndSecurity/.settings/
+/SpringBackEndSecurity/target/
+/SpringBackEndSecurity/build/
+/SpringBackEndSecurity/dist/
+/SpringBackEndSecurity/*.classpath
+/SpringBackEndSecurity/*.project
+/SpringBackEndSecurity/src/test/
+/SpringBackEndSecurity/src/main/resources/static/
+/SpringBackEndSecurity/src/main/resources/templates/
+
