@@ -170,3 +170,15 @@
 /SpringBackEndSecurity/src/main/resources/static/
 /SpringBackEndSecurity/src/main/resources/templates/
 
+/SpringSecurityWithJWT/nbproject/
+/SpringSecurityWithJWT/.settings/
+/SpringSecurityWithJWT/target/
+/SpringSecurityWithJWT/build/
+/SpringSecurityWithJWT/dist/
+/SpringSecurityWithJWT/*.classpath
+/SpringSecurityWithJWT/nbactions.xml
+/SpringSecurityWithJWT/*.project
+/SpringSecurityWithJWT/src/test/
+/SpringSecurityWithJWT/src/main/resources/static/
+/SpringSecurityWithJWT/src/main/resources/templates/
+
