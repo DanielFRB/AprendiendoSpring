@@ -7,4 +7,3 @@ en una aplicacion Spring, se estaran tocando los siguientes puntos:
 	3. Autenticación Básica.
 	4. Autenticación JDBC.
 	5. Token JWT.
-	6. Pagina Login con ReactJS integrada con la Aplicación Spring.
