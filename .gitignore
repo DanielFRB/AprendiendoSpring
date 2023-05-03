@@ -175,6 +175,10 @@
 /SpringSecurityWithJWT/target/
 /SpringSecurityWithJWT/build/
 /SpringSecurityWithJWT/dist/
+/SpringSecurityWithJWT/.mvn/
+/SpringSecurityWithJWT/mvnw
+/SpringSecurityWithJWT/*.cmd
+/SpringSecurityWithJWT/HELP.md
 /SpringSecurityWithJWT/*.classpath
 /SpringSecurityWithJWT/nbactions.xml
 /SpringSecurityWithJWT/*.project
