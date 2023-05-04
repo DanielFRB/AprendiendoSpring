@@ -186,3 +186,19 @@
 /SpringSecurityWithJWT/src/main/resources/static/
 /SpringSecurityWithJWT/src/main/resources/templates/
 
+/SpringRecordApp/nbproject/
+/SpringRecordApp/.settings/
+/SpringRecordApp/target/
+/SpringRecordApp/build/
+/SpringRecordApp/dist/
+/SpringRecordApp/.mvn/
+/SpringRecordApp/mvnw
+/SpringRecordApp/*.cmd
+/SpringRecordApp/HELP.md
+/SpringRecordApp/*.classpath
+/SpringRecordApp/nbactions.xml
+/SpringRecordApp/*.project
+/SpringRecordApp/src/test/
+/SpringRecordApp/src/main/resources/static/
+/SpringRecordApp/src/main/resources/templates/
+
