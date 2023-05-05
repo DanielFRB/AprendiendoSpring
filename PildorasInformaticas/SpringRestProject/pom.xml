@@ -45,7 +45,7 @@
     <!-- Maven WAR Plugin -->
     <build>
 	<finalName>SpringRestProject</finalName>
-	
+        
 	<pluginManagement>
             <plugins>
 		<plugin>
